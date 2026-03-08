@@ -21,36 +21,84 @@ This project demonstrates how legacy JavaScript code can be refactored using mod
 week-11/
 └ assignment-1-es6-refactor/
     ├ legacy.js
-    
-    
+    ├ modern.js
+    ├ data.js
+    ├ userUtils.js
+    └ README.md
+```
 
-## Assignment 1 — ES6 Refactor Pack
-
-### Objective
-Practice modern JS syntax and refactoring for readability.
-
-### Tasks
-1) Create week-11/assignment-1-es6-refactor/legacy.js with any “legacy-style” code.
-2) Create modern.js that refactors it using ES6+ features.
-3) Your modern.js must use:
-- let / const (no var)
-- destructuring (object and/or array)
-- template literals
-- at least *3* array methods (map/filter/reduce/find/some/every)
-- modules (split code into at least 2 files using import/export)
-
-### Deliverables
-- legacy.js
-- modern.js (and module files)
-- README.md (what changed + why)
-
-### Rubric (20 pts)
-- Correctness (6)
-- ES6+ coverage (6)
-- Readability (4)
-- Module structure (4)
+* **legacy.js** – Original implementation written in older JavaScript style.
+* **modern.js** – Refactored implementation using ES6+ features.
+* **data.js** – Module containing the dataset used in the program.
+* **userUtils.js** – Utility functions that process user data.
 
 ---
+
+## How to Run the Code
+
+### 1. Navigate to the project directory
+
+Open a terminal and move to the assignment folder.
+
+```
+cd week-11/assignment-1-es6-refactor
+```
+
+### 2. Run the legacy version
+
+```
+node legacy.js
+```
+
+### 3. Run the modern ES6 version
+
+```
+node modern.js
+```
+
+Make sure you are using a recent version of Node.js that supports ES modules.
+
+---
+
+## ES6 Features Used in the Refactor
+
+The modern implementation includes several ES6+ features:
+
+* **const** instead of `var`
+* **Destructuring** for extracting object properties
+* **Template literals** for cleaner string formatting
+* **Arrow functions** for concise function syntax
+* **Array methods** such as:
+
+  * `map`
+  * `filter`
+  * `reduce`
+  * `find`
+* **Modules** using `import` and `export` to separate code into reusable files
+
+---
+
+## What I Learned
+
+While completing this assignment, I learned how modern JavaScript features make code easier to read and maintain. Using array methods such as `map`, `filter`, and `reduce` helped simplify logic that previously required multiple loops. I also learned how to organize code into modules using `import` and `export`, which makes the project more structured and reusable.
+
+Another key lesson was how destructuring allows direct access to object properties, reducing repetitive code. Template literals also make string formatting cleaner compared to traditional string concatenation.
+
+---
+
+## Challenges
+
+One challenge was understanding how to break the program into separate modules while ensuring the files worked together correctly. Importing and exporting functions between files required careful organization of the project structure.
+
+Another challenge was converting traditional loops into array methods. While loops are straightforward, using methods like `reduce` required thinking differently about how data is processed.
+
+However, after practicing these concepts, the modern approach became much clearer and significantly improved the readability of the code.
+
+---
+
+
+
+
 
 ## Assignment 2 — Async Data Dashboard (Vanilla JS)
 
