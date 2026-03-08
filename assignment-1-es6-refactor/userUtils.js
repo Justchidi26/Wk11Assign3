@@ -10,3 +10,7 @@ export const calculateAverageScore = (users) => {
 export const getUserNames = (users) => {
   return users.map(({ name }) => name);
 }; // Get a list of all user names from the users array
+
+export const findUserByName = (users, name) => {
+  return users.find(({ name: userName }) => userName === name);
+}; // Search the users array 
