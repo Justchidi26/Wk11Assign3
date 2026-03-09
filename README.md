@@ -24,12 +24,11 @@ week-11/
     ├ modern.js
     ├ data.js
     ├ userUtils.js
-    └ README.md
 ```
 
-* **legacy.js** – Original implementation written in older JavaScript style.
-* **modern.js** – Refactored implementation using ES6+ features.
-* **data.js** – Module containing the dataset used in the program.
+**legacy.js** – Original implementation written in older JavaScript style.
+**modern.js** – Refactored implementation using ES6+ features.
+**data.js** – Module containing the dataset used in the program.
 * **userUtils.js** – Utility functions that process user data.
 
 ---
@@ -64,11 +63,11 @@ Make sure you are using a recent version of Node.js that supports ES modules.
 
 The modern implementation includes several ES6+ features:
 
-* **const** instead of `var`
-* **Destructuring** for extracting object properties
-* **Template literals** for cleaner string formatting
-* **Arrow functions** for concise function syntax
-* **Array methods** such as:
+**const** instead of `var`
+**Destructuring** for extracting object properties
+**Template literals** for cleaner string formatting
+**Arrow functions** for concise function syntax
+**Array methods** such as:
 
   * `map`
   * `filter`
@@ -96,50 +95,94 @@ However, after practicing these concepts, the modern approach became much cleare
 
 ---
 
+# Async Data Dashboard
 
+## Project Overview
 
+This project is a Node.js script that reads two datasets (`users.json` and `orders.json`) asynchronously and generates a simple dashboard report in the console. The script analyzes the data using JavaScript array methods and prints useful insights such as total users, active users, average order amount, order counts by status, and the top 3 highest orders.
 
-
-## Assignment 2 — Async Data Dashboard (Vanilla JS)
-
-### Objective
-Master Promises + async/await + error handling.
-
-### Task
-Build a Node script that:
-1) Loads two datasets asynchronously:
-   - Option A: use fetch in the browser (if you prefer front-end)
-   - Option B (recommended for Node): read from two local JSON files using fs/promises
-2) Computes insights using array methods, e.g.:
-   - top 3 values
-   - average
-   - count by category (use reduce)
-3) Prints a clean “dashboard” report to the console.
-
-### Step-by-step (recommended approach)
-1) Create a folder:
-   - week-11/assignment-2-async-dashboard/
-2) Create:
-   - data/ (put two .json files here)
-   - index.js
-   - package.json with "type": "module"
-3) Read both JSON files with fs/promises *in parallel* using Promise.all.
-4) Compute insights with array methods.
-5) Print a clear report (use console.table where it helps).
-
-### Requirements
-- Must use async/await
-- Must have try/catch
-- Must demonstrate *parallel* async work with Promise.all
-
-### Starter (optional)
-You can copy this starter and modify it:
-- starters/assignment-2-async-dashboard/
-
-### Rubric (20 pts)
-- Async correctness (8)
-- Error handling (4)
-- Data insights (4)
-- Code quality (4)
+The goal of this assignment was to practice **asynchronous programming in Node.js**, working with **JSON datasets**, and using **array methods to compute insights**.
 
 ---
+
+## Project Structure
+
+```
+week-11/
+└── assignment-2-async-dashboard/
+    ├── data/
+    │   ├── users.json
+    │   └── orders.json
+    ├── index.js
+    ├── package-lock.json
+    └── package.json
+```
+
+---
+
+## How to Run the Project
+
+### 1. Clone or Download the Project
+
+Navigate to the project directory:
+
+```
+cd assignment-2-async-dashboard
+```
+
+### 2. Install Dependencies
+
+This project does not require external dependencies, but you can run:
+
+```
+npm install
+```
+
+### 3. Run the Script
+
+Run the program using:
+
+```
+npm run start
+```
+
+or
+
+```
+node index.js
+```
+
+---
+
+## What I Learned
+
+While working on this project, I learned several important JavaScript and Node.js concepts:
+
+* How to read files asynchronously in Node.js using `fs/promises`.
+* How `async/await` simplifies working with asynchronous operations.
+* How `Promise.all()` can run multiple asynchronous operations in parallel.
+* How to use array methods such as `map`, `filter`, `reduce`, and `sort` to analyze data.
+* How to format console output using `console.table()` for better readability.
+* The importance of error handling using `try/catch` when working with asynchronous code.
+
+---
+
+## Challenges I Faced
+
+One of the main challenges was understanding how to correctly load both datasets **in parallel** using `Promise.all()` instead of sequentially. Initially, it was confusing to understand how both promises resolve together and how to destructure the result into `users` and `orders`.
+
+Another challenge was using the `reduce` method to count items by category. It took some time to understand how the accumulator object stores and updates counts dynamically.
+
+Understanding how to properly work with file paths in ES modules using `new URL(..., import.meta.url)` was also something new that required some research.
+
+---
+
+
+
+## Technologies Used
+
+* Node.js
+* JavaScript (ES Modules)
+* fs/promises
+* JSON datasets
+* Git

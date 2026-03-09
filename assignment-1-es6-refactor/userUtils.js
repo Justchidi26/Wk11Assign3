@@ -3,7 +3,9 @@ export const getAdults = (users) => {
 }; // Filter users who are 18 years or older
 
 export const calculateAverageScore = (users) => {
-  const total = users.reduce((sum, { score }) => sum + score, 0);
+  const total = users.reduce((sum, { score }) => 
+    sum + score,
+   0);
   return total / users.length;
 }; // Calculate the average score of the adult users
 
